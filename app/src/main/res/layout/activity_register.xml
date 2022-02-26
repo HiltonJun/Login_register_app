@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_register_welcome_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:gravity="center"
+            android:text="@string/register_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <EditText
+            android:id="@+id/et_name_register"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:hint="@string/name_registration"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_welcome_message" />
+
+        <EditText
+            android:id="@+id/et_email_register"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:hint="@string/email_registration"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_register" />
+
+        <EditText
+            android:id="@+id/et_password_register"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:hint="@string/password_registration"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_register" />
+
+        <EditText
+            android:id="@+id/et_password_confirmation"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:hint="@string/password_confirm"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password_register" />
+
+        <Button
+            android:id="@+id/bt_register_end"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/bt_registration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password_confirmation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

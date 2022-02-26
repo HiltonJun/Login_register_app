@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lesson 2</string>
+    <string name="password_login">password</string>
+    <string name="email_login">Email</string>
+    <string name="button_login">login</string>
+    <string name="not_registered_click_here_login">Not registered? Click here</string>
+    <string name="generic_error">Field is empty</string>
+    <string name="login_success">Login successful</string>
+    <string name="register_welcome">Please inform:</string>
+    <string name="name_registration">Name</string>
+    <string name="email_registration">Email</string>
+    <string name="password_registration">Password</string>
+    <string name="password_confirm">Confirm password</string>
+    <string name="bt_registration">Register</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_password">Password must be a least 8 characters long</string>
+    <string name="invalid_confirmation">Not identical to password</string>
+    <string name="registration_success">Registration successful</string>
+</resources>

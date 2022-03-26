@@ -7,39 +7,36 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import com.google.firebase.auth.FirebaseAuth
+import com.hilton.lesson2.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var etEmail: EditText
-    private lateinit var etPassword: EditText
-    private lateinit var btLogin: Button
-    private lateinit var tvRegister: TextView
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        findViewById()
+        startBinding()
         click()
         tvClick()
     }
 
-    private fun findViewById() {
-        etEmail = findViewById(R.id.et_email_login)
-        etPassword = findViewById(R.id.et_password_login)
-        btLogin = findViewById(R.id.bt_login)
-        tvRegister = findViewById(R.id.tv_register)
+    private fun startBinding() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        binding.root
     }
 
     private fun checkLogin() {
-        val email = etEmail.validate()
-        val password = etPassword.validate()
+        val email = binding.etEmailLogin.validate()
+        val password = binding.etPasswordLogin.validate()
         when {
-            email -> etEmail.error = getString(R.string.generic_error)
-            password -> etPassword.error = getString(R.string.generic_error)
-            else -> toast(getString(R.string.login_success))
+            email -> binding.etEmailLogin.error = getString(R.string.generic_error)
+            password -> binding.etPasswordLogin.error = getString(R.string.generic_error)
+            else -> loginFirebase(binding.etEmailLogin.get(), binding.etPasswordLogin.get())
         }
     }
 
     private fun click() {
-        btLogin.setOnClickListener {
+        binding.btLogin.setOnClickListener {
             checkLogin()
         }
     }
@@ -50,8 +47,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun tvClick() {
-        tvRegister.setOnClickListener {
+        binding.tvRegister.setOnClickListener {
             startRegistration()
         }
+    }
+
+    private fun loginFirebase(email: String,password: String){
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
+            .addOnSuccessListener { toast("Login successful") }
+            .addOnFailureListener { errorCase->
+                errorCase.message?.let{message -> toast(message)}
+            }
     }
 }

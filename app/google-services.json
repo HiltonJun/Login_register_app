@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135871396286",
+    "project_id": "to-do-list-b7916",
+    "storage_bucket": "to-do-list-b7916.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135871396286:android:95e481abd8f78fa5a0a1ef",
+        "android_client_info": {
+          "package_name": "com.hilton.lesson2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135871396286-pe9h1g5l6h13cq8ik39vhr7m20rbqei8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSQR6L5XMAwe0wCYZ0xmy3vTqa123D_II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135871396286-pe9h1g5l6h13cq8ik39vhr7m20rbqei8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
